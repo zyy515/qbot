@@ -28,5 +28,5 @@ async def _(event: GroupMessageEvent, key: str = ArgPlainText()):
         else:
             await lottery.finish(Message([MessageSegment.text('所选中的人为'),MessageSegment.text(",".join(msg))]))
     else:
-        await lottery.finish("输入错误，请重新输入数字")
+        await lottery.send("输入错误，请重新输入数字")
     
